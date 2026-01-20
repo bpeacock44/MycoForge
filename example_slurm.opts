@@ -1,0 +1,6 @@
+cpus-per-task=32
+mem=128G
+time=14-00:00:00
+mail-type=END,FAIL
+mail-user=user@email.com
+partition=epyc
