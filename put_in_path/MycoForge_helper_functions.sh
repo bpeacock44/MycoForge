@@ -571,6 +571,7 @@ annotate_genome() {
 
         if (( RNAseq_FLAG )); then
             echo "--- Step 6:  funannotate update ---"
+            unset PASACONF
             if [[ ! -s "$UPDATE" ]]; then
                 funannotate update -i "$PREDICT" 
                 check_file "$UPDATE" "Update output"

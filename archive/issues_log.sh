@@ -156,3 +156,13 @@ export PATH=/rhome/bpeacock/bigdata/programs/CodingQuarry_v1.3:$PATH
 #
 #When I ran it with no modifications, this error didn't occur. 
 #Debug! Hopefully all PASA modifications won't be needd.
+
+# - - 
+
+# # # # # NEXT ISSUE # # # # #
+
+# - -
+
+# Getting the same error. When I took off modifications it still didn't work. Chatgpt said it's probably because I only have 2 transcripts from Trinity and when I went back and checked, all other runs had tens of thousands so that could be the problem!
+# note - maybe the CMD ERROR has nothing to do with installation - it's something wrong with the data? go back and test
+# [01/28/26 12:56:50]: 2 transcripts derived from Trinity

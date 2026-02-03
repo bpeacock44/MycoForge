@@ -59,8 +59,6 @@ LOGFILE="$LOGDIR/worker.${BASE}.line${LINE_NUM}.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
 # # # Load functions # # #
-# Source your main pipeline script or shared functions file
-# IMPORTANT: this file should NOT re-run validation or loops
 source MycoForge_helper_functions.sh
 
 # # # Run pipeline # # #
@@ -82,8 +80,7 @@ polish_and_assess "$BASE" "$ASSEMBLER" "$LR" "$R1" "$R2"
 echo
 echo "Step 4: Annotation"
 module load funannotate
-export PASAHOME="$HOME/.pasa"
-export PASACONF="$PASAHOME/pasa_conf/alignAssembly.sqlite.config"
+export PASACONF="$PASAHOME/pasa_conf/alignAssembly.sqlite.config" # this will be removed before update
 export PATH="${CODINGQUARRY_PATH}:$PATH"
 annotate_genome "$BASE" "$ASSEMBLER" "$RNA1" "$RNA2" "$SPECIES"
 
